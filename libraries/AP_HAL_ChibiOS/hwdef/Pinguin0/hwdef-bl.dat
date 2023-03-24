@@ -1,5 +1,3 @@
-# hw definition file for processing by chibios_pins.py
-# for minimal F405 bootloader
 
 # MCU class and specific type
 MCU STM32F4xx STM32F405xx
@@ -17,7 +15,7 @@ FLASH_RESERVE_START_KB 0
 
 
 # LEDs
-PC13 LED_BOOTLOADER OUTPUT LOW
+PC13 LED_BOOTLOADER OUTPUT LOW # m
 PC14 LED_ACTIVITY OUTPUT LOW
 define HAL_LED_ON 0 
 

@@ -7,16 +7,15 @@
 MCU STM32F4xx STM32F405xx
 
 # board ID for firmware load
-APJ_BOARD_ID 1444
+APJ_BOARD_ID 125
 
 # crystal frequency
-OSCILLATOR_HZ 16000000
+OSCILLATOR_HZ 8000000
 
 define STM32_ST_USE_TIMER 4
 define CH_CFG_ST_RESOLUTION 16
 
 FLASH_SIZE_KB 1024
-
 
 # only one I2C bus
 I2C_ORDER I2C1
@@ -125,7 +124,7 @@ define HAL_STORAGE_SIZE 15360
 STORAGE_FLASH_PAGE 2
 
 # reserve 32k for bootloader and 32k for flash storage
-FLASH_RESERVE_START_KB 0
+FLASH_RESERVE_START_KB 64
 
 # one IMU
 IMU Invensense SPI:mpu6000 ROTATION_YAW_180
