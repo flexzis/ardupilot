@@ -5,21 +5,25 @@
 
 ## Инструкция по установке автопилота на плату с ОС Ubuntu
 ### Инициализация репозитория
+```
 git clone https://github.com/flexzis/ardupilot.git
 cd ardupilot
 git submodule update --init --recursive
+```
 
-
-### Шаг 1: Сборка 
+### Шаг 1: Сборка
+```
 ./waf distclean
 ./waf configure --board Pinguin0
 ./waf plane
+```
 После этого должен появится файл arduplane_with_bl.hex в build/Pinguin0/bin.
 
 
 ### 	Шаг 2: Загрузка прошивки на плату 
-(предварительно устанавливаем dfu-util: sudo apt-get install dfu-util)
+(предварительно устанавливаем dfu-util: `sudo apt-get install dfu-util`)
+```
 dfu-util -a 0 --dfuse-address 0x08000000 -D ./build/Pinguin0/bi/arduplane_with_bl.hex
-
+```
 
 Проверить работоспособность можно через любую наземную станцию: MissionPlanner / QGC / MavProxy.
