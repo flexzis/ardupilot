@@ -18,7 +18,7 @@ git submodule update --init --recursive
 
 
 ### 	Шаг 2: Загрузка прошивки на плату 
-# (предварительно устанавливаем dfu-util: sudo apt-get install dfu-util)
+(предварительно устанавливаем dfu-util: sudo apt-get install dfu-util)
 dfu-util -a 0 --dfuse-address 0x08000000 -D ./build/Pinguin0/bi/arduplane_with_bl.hex
 
 
