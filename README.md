@@ -1,5 +1,6 @@
 # AVES Autopilot
 Используется Open-Source проект [Ardupilot](https://github.com/ArduPilot/ardupilot), модифицированный для возможности запуска на плате собственной разработки Royal Pinguin (в данном проекте hwdef для первой версии платы).
+
 Для этого был создан файл hwdef (находится в libraries/AP_HAL_ChibiOS/hwdef/Pinguin0/), с описанием адресов шин и датчиков платы.
 
 
